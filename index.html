@@ -1,0 +1,232 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Login to Meeting</title>
+    <style>
+        #root {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #loginForm {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div id="loginForm">
+            <h2>Login to Meeting</h2>
+            <div class="form-group">
+                <input type="text" id="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input type="password" id="meetingCode" placeholder="Meeting Code">
+            </div>
+            <button id="createMeetingBtn">Create Meeting</button>
+            <button id="joinMeetingBtn">Join Meeting</button>
+            <p id="error" style="color: red; display: none;">Invalid username or meeting code.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("createMeetingBtn").onclick = function() {
+            // Redirect to WEB_UIKITS.html for Create Meeting
+            window.location.href = "WEB_UIKITS.html";
+        };
+
+        document.getElementById("joinMeetingBtn").onclick = function() {
+            // Get username and meeting code values
+            const username = document.getElementById("username").value;
+            const meetingCode = document.getElementById("meetingCode").value;
+
+            // Validate username and meeting code
+            if (username === "ihub" && meetingCode === "123") {
+                // Redirect to WEB_UIKITS.html for Join Meeting if validation is successful
+                window.location.href = "WEB_UIKITS.html";
+            } else {
+                // Show error message if validation fails
+                document.getElementById("error").style.display = "block";
+            }
+        };
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNS Zoom Meet - Login</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Background */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4b79a1, #283e51);
+            color: #333;
+        }
+
+        /* Centered Root Container */
+        #root {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            color: #fff;
+        }
+
+        /* Login Form Container */
+        #loginForm {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover Effect for Form */
+        #loginForm:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Form Title */
+        #loginForm h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #333;
+        }
+
+        /* Form Group */
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        /* Input Fields */
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #4b79a1;
+        }
+
+        /* Button Styles */
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        #createMeetingBtn {
+            background-color: #4b79a1;
+        }
+
+        #createMeetingBtn:hover {
+            background-color: #3b5f75;
+        }
+
+        #joinMeetingBtn {
+            background-color: #283e51;
+        }
+
+        #joinMeetingBtn:hover {
+            background-color: #1f2f3b;
+        }
+
+        /* Error Message */
+        #error {
+            color: #d9534f;
+            margin-top: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div id="loginForm">
+            <h2>SNS Zoom Meet - Login</h2>
+            <div class="form-group">
+                <input type="text" id="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input type="password" id="meetingCode" placeholder="Meeting Code">
+            </div>
+            <button id="createMeetingBtn">Create Meeting</button>
+            <button id="joinMeetingBtn">Join Meeting</button>
+            <p id="error">Invalid username or meeting code.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("createMeetingBtn").onclick = function() {
+            // Redirect to WEB_UIKITS.html for Create Meeting
+            window.location.href = "WEB_UIKITS.html";
+        };
+
+        document.getElementById("joinMeetingBtn").onclick = function() {
+            // Get username and meeting code values
+            const username = document.getElementById("username").value;
+            const meetingCode = document.getElementById("meetingCode").value;
+
+            // Validate username and meeting code
+            if (username === "ihub" && meetingCode === "123") {
+                // Redirect to WEB_UIKITS.html for Join Meeting if validation is successful
+                window.location.href = "WEB_UIKITS.html";
+            } else {
+                // Show error message if validation fails
+                document.getElementById("error").style.display = "block";
+            }
+        };
+    </script>
+</body>
+</html>
